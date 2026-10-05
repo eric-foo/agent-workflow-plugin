@@ -1,7 +1,7 @@
 {
   "name": "agent-workflow",
   "version": "0.1.110",
-  "description": "Reusable workflow-kernel skills for Codex: deep thinking, incremental and architecture planning, implementation scoping, micro-decision locking, assumption checks, code and artifact review, delegated review-and-patch, before/after comparison, postmortems, prompt orchestration, handoffs, reorientation, and repository context.",
+  "description": "Reusable workflow-kernel skills for Codex: deep thinking, success-implement, prompt orchestration, delegated review-and-patch, adversarial artifact review, code review, incremental and architecture planning, implementation scoping, micro-decision locking, assumption checks, and handoffs.",
   "author": {
     "name": "Eric",
     "url": "https://github.com/eric-foo"
@@ -20,7 +20,7 @@
   "interface": {
     "displayName": "Agent Workflow",
     "shortDescription": "Workflow-kernel skills for Codex",
-    "longDescription": "Agent Workflow packages reusable Codex skills for deep reasoning, incremental and architecture planning, implementation scoping, micro-decision locking before bounded implementation, pre-build assumption checks, success-signal implementation, source-backed code and artifact review, delegated review-and-patch, before/after comparison, postmortem review, prompt orchestration, cold handoffs, state reorientation, and repository context. The bundled workflows preserve local repository authority and keep advisory guidance separate from strict validation, readiness, deployment, and resolver claims.",
+    "longDescription": "Agent Workflow packages reusable Codex skills built on deep thinking, success-signal implementation, and prompt orchestration, with delegated review-and-patch, adversarial artifact review, and code review on top. Planning skills cover incremental and architecture planning, implementation scoping, micro-decision locking, pre-build assumption checks, and cold handoffs. The bundled workflows preserve local repository authority and keep advisory guidance separate from strict validation, readiness, deployment, and resolver claims.",
     "developerName": "Eric",
     "category": "Coding",
     "capabilities": [
@@ -37,8 +37,6 @@
       "Lock micro-decisions before implementing this bounded patch",
       "Check this plan's assumptions before we build",
       "Review this code",
-      "Compare this plan against the original intent",
-      "Reorient me on the current workflow state",
       "Hand off this work to a fresh thread"
     ],
     "brandColor": "#2563EB",

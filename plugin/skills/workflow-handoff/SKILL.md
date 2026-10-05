@@ -1,6 +1,6 @@
 ---
 name: workflow-handoff
-description: Source-only workflow-kernel candidate for cold cross-lane handoff packets. Use when explicitly invoking `workflow-handoff`, asking to hand off or transfer in-progress work to a fresh lane, different agent, new thread, or separate worktree that has none of the sender's context, or authoring or validating this source candidate. Built on the precompact packet skeleton but specialized for a cold reader — durable destination by default, fresh-reader self-containment, front-loaded goal and open-decision and drift-guard, and a confirm-don't-trust load contract. Do not use for same-thread resume after `/compact`, for writing the courier prompt or wrapper that routes a receiver to a handoff (that is `workflow-prompt-orchestrator`), for general repo orientation (that is `workflow-repo-context`), or for deployment, install, resolver, or readiness claims.
+description: Source-only workflow-kernel candidate for cold cross-lane handoff packets. Use when explicitly invoking `workflow-handoff`, asking to hand off or transfer in-progress work to a fresh lane, different agent, new thread, or separate worktree that has none of the sender's context, or authoring or validating this source candidate. Built on the precompact packet skeleton but specialized for a cold reader — durable destination by default, fresh-reader self-containment, front-loaded goal and open-decision and drift-guard, and a confirm-don't-trust load contract. Do not use for same-thread resume after `/compact`, for writing the courier prompt or wrapper that routes a receiver to a handoff (that is `workflow-prompt-orchestrator`), or for deployment, install, resolver, or readiness claims.
 ---
 
 # Workflow Handoff
@@ -22,7 +22,7 @@ It reuses the precompact working-packet skeleton: the working-packet contract, t
 It does not own:
 
 - the courier prompt, wrapper, or routing instruction that tells the receiver what to do; that is `workflow-prompt-orchestrator` (`handoff` template kind), which points at the packet this skill produces;
-- general repository orientation, source loading, routing, or context-packet setup (`workflow-repo-context`); a generic summary; or project-owned routing and sequencing;
+- general repository orientation, source loading, routing, or context-packet setup; a generic summary; or project-owned routing and sequencing;
 - semantic readiness, review verdicts, deployment readiness, or validation gates; the packet alone is a continuation artifact, never governance, validation, acceptance, or readiness evidence;
 - mechanical fact generation beyond invoking or recording bound preflight evidence;
 - installed-copy, resolver, plugin, or automatic-hook behavior. Do not install, deploy, promote, package, rename, or shadow skills, edit installed, user-level, plugin, global, or project-local skill roots, or create runtime code, implementation directories, build systems, plugin metadata, commits, remotes, or pushes, unless a later turn explicitly authorizes it. Such a request without authority returns `BLOCKED_UNAUTHORIZED_DEPLOYMENT_OR_INSTALL`.

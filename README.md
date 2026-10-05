@@ -41,7 +41,6 @@ thread.
 - `check this plan's assumptions before we build`
 - `review this code`
 - `hand this off to a fresh thread`
-- `where are we?`
 
 ## Skills
 
@@ -55,8 +54,6 @@ thread.
 | `workflow-delegated-review-patch` | Have a different model review and patch, then adjudicate what to keep. |
 | `workflow-adversarial-artifact-review` | Review plans, specs, and docs adversarially. |
 | `workflow-code-review` | Review code against visible evidence. |
-| `workflow-before-after-lens` | Compare a result against the original intent. |
-| `workflow-postmortem-review` | Find what went wrong and why. |
 | **Planning and handoffs** | |
 | `incremental-planning` | Pick the next move that compounds most. |
 | `workflow-architecture-planning` | Compare system design options before building. |
@@ -64,8 +61,6 @@ thread.
 | `micro-decision-locking` | Settle the few small choices that would otherwise drift mid-build. |
 | `workflow-assumption-gate` | Catch unverified assumptions a plan quietly relies on. |
 | `workflow-handoff` | Package in-progress work for a fresh agent or thread. |
-| `workflow-reorient` | Get a status snapshot: where are we, what's next. |
-| `workflow-repo-context` | Orient in an unfamiliar repository. |
 
 Skills are advisory: they never install, deploy, commit, or push on their own,
 and they respect your repository's own rules.
