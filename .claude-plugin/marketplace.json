@@ -8,7 +8,7 @@
     {
       "name": "agent-workflow",
       "source": "./plugin",
-      "description": "Reusable workflow-kernel skills for structured agent reasoning."
+      "description": "Workflow skills built on deep thinking, success-implement, and prompt orchestration, with delegated review-and-patch and adversarial review tuned over thousands of PRs."
     }
   ]
 }
