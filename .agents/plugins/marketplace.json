@@ -1,5 +1,5 @@
 {
-  "name": "agent-workflow-local",
+  "name": "agent-workflow",
   "interface": {
     "displayName": "Agent Workflow"
   },

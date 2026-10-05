@@ -3,6 +3,7 @@
   "owner": {
     "name": "Eric"
   },
+  "description": "Workflow skills for coding agents: deep thinking, success-implement, prompt orchestration, and delegated review-and-patch.",
   "plugins": [
     {
       "name": "agent-workflow",

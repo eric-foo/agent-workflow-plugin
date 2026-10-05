@@ -17,21 +17,32 @@ adversarial review, tested and tuned over thousands of PRs.
 
 ## Install
 
-**Claude Code**: run inside Claude Code:
+The easy way: tell your coding agent (Claude Code or Codex)
+**"install the eric-foo/agent-workflow-plugin plugin"** and approve the
+commands it runs. Start a new session afterwards so the skills load.
+
+Or run the commands yourself.
+
+**Claude Code** (in your terminal):
 
 ```
-/plugin marketplace add eric-foo/agent-workflow-plugin
-/plugin install agent-workflow@agent-workflow
+claude plugin marketplace add eric-foo/agent-workflow-plugin
+claude plugin install agent-workflow@agent-workflow
 ```
+
+Inside a Claude Code session, the same thing is
+`/plugin marketplace add eric-foo/agent-workflow-plugin` then
+`/plugin install agent-workflow@agent-workflow`.
 
 **Codex**:
 
 ```
 codex plugin marketplace add eric-foo/agent-workflow-plugin
+codex plugin add agent-workflow@agent-workflow
 ```
 
-Then install **Agent Workflow** from the Codex plugin browser and start a new
-thread.
+This is a plugin for coding agents. The ChatGPT and Claude.ai chat apps can't
+install it.
 
 ### Share it with your team (Claude Code)
 
