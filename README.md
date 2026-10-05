@@ -33,6 +33,30 @@ codex plugin marketplace add eric-foo/agent-workflow-plugin
 Then install **Agent Workflow** from the Codex plugin browser and start a new
 thread.
 
+### Share it with your team (Claude Code)
+
+To have Claude Code offer the plugin to everyone who opens a repo, commit this
+to the repo's `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "agent-workflow": {
+      "source": { "source": "github", "repo": "eric-foo/agent-workflow-plugin" }
+    }
+  },
+  "enabledPlugins": { "agent-workflow@agent-workflow": true }
+}
+```
+
+## How to use it
+
+Ask in plain language ("deep think about…", "success implement this",
+"scope this plan") or call a skill by name, for example
+`/agent-workflow:workflow-deep-thinking`. Skills read your repo's own
+instructions (`CLAUDE.md`, `AGENTS.md`) and follow them; they never install,
+deploy, commit, or push on their own.
+
 ## Try it
 
 - `deep think: should we split this service?`
@@ -62,8 +86,29 @@ thread.
 | `workflow-assumption-gate` | Catch unverified assumptions a plan quietly relies on. |
 | `workflow-handoff` | Package in-progress work for a fresh agent or thread. |
 
-Skills are advisory: they never install, deploy, commit, or push on their own,
-and they respect your repository's own rules.
+## What works out of the box
+
+Every skill works in any repo with no setup, except that two need a little
+repo configuration for their full mode:
+
+- **Delegated review-and-patch** sends your work to a reviewer from a
+  *different* AI vendor (for example, Codex reviewing Claude's work), then has
+  your main model decide which of the reviewer's changes to keep. It needs two
+  things:
+  1. **A second AI tool** from another vendor. The skill writes a
+     ready-to-paste prompt; you run it in the other tool and bring the result
+     back for adjudication.
+  2. **A repo overlay**: a short file in your repo, referenced from
+     `AGENTS.md` or `CLAUDE.md`, that opts the repo in and names the operating
+     contract, model choices, protected paths, and where outputs go.
+
+  Without an overlay, the skill explains what it would do but does not run a
+  full review commission.
+- **Prompt orchestrator** writes prompts in chat anywhere. Saving prompts to
+  files requires the overlay to say where they go.
+
+Code review and adversarial review work without an overlay and return advisory
+findings; an overlay adds formal verdicts and patch queues.
 
 ## License
 
