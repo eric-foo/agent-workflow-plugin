@@ -1,0 +1,47 @@
+{
+  "name": "agent-workflow",
+  "version": "0.1.110",
+  "description": "Reusable workflow-kernel skills for Codex: deep thinking, incremental and architecture planning, implementation scoping, micro-decision locking, assumption checks, code and artifact review, delegated review-and-patch, before/after comparison, postmortems, prompt orchestration, handoffs, reorientation, and repository context.",
+  "author": {
+    "name": "Eric",
+    "url": "https://github.com/eric-foo"
+  },
+  "homepage": "https://github.com/eric-foo/agent-workflow-plugin",
+  "repository": "https://github.com/eric-foo/agent-workflow-plugin",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "workflow",
+    "skills",
+    "planning",
+    "review"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Workflow",
+    "shortDescription": "Workflow-kernel skills for Codex",
+    "longDescription": "Agent Workflow packages reusable Codex skills for deep reasoning, incremental and architecture planning, implementation scoping, micro-decision locking before bounded implementation, pre-build assumption checks, success-signal implementation, source-backed code and artifact review, delegated review-and-patch, before/after comparison, postmortem review, prompt orchestration, cold handoffs, state reorientation, and repository context. The bundled workflows preserve local repository authority and keep advisory guidance separate from strict validation, readiness, deployment, and resolver claims.",
+    "developerName": "Eric",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/eric-foo/agent-workflow-plugin",
+    "defaultPrompt": [
+      "Deep think through this implementation plan",
+      "What is the highest-compounding next step?",
+      "Plan target architecture before feature planning",
+      "Scope implementation for the accepted plan",
+      "Lock micro-decisions before implementing this bounded patch",
+      "Check this plan's assumptions before we build",
+      "Review this code",
+      "Compare this plan against the original intent",
+      "Reorient me on the current workflow state",
+      "Hand off this work to a fresh thread"
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

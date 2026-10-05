@@ -1,0 +1,13 @@
+{
+  "name": "agent-workflow",
+  "owner": {
+    "name": "Eric"
+  },
+  "plugins": [
+    {
+      "name": "agent-workflow",
+      "source": "./plugin",
+      "description": "Reusable workflow-kernel skills for structured agent reasoning."
+    }
+  ]
+}

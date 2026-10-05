@@ -1,0 +1,10 @@
+{
+  "name": "agent-workflow",
+  "version": "0.1.110",
+  "description": "Workflow skills for Claude Code: deep thinking, planning, implementation scoping, code and artifact review, delegated review-and-patch, prompt orchestration, handoffs, and reorientation.",
+  "author": {
+    "name": "Eric"
+  },
+  "license": "MIT",
+  "skills": "./skills/"
+}
