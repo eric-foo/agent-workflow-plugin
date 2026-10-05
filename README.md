@@ -98,14 +98,17 @@ repo configuration for their full mode:
   1. **A second AI tool** from another vendor. The skill writes a
      ready-to-paste prompt; you run it in the other tool and bring the result
      back for adjudication.
-  2. **A repo overlay**: a short file in your repo, referenced from
-     `AGENTS.md` or `CLAUDE.md`, that opts the repo in and names the operating
-     contract, model choices, protected paths, and where outputs go.
+  2. **A repo overlay**: a short section in your `AGENTS.md` or `CLAUDE.md`
+     that opts the repo in and names the operating contract, model choices,
+     protected paths, and where outputs go. Copy it from
+     [templates/workflow-overlay.md](templates/workflow-overlay.md) and fill
+     in the placeholders.
 
   Without an overlay, the skill explains what it would do but does not run a
   full review commission.
 - **Prompt orchestrator** writes prompts in chat anywhere. Saving prompts to
-  files requires the overlay to say where they go.
+  files requires the overlay to say where they go (the template's optional
+  "Prompt files" part).
 
 Code review and adversarial review work without an overlay and return advisory
 findings; an overlay adds formal verdicts and patch queues.
